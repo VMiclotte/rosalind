@@ -1,3 +1,6 @@
+from reader.Reader import Reader
+
+
 def permute(list1, low=0):
     if low + 1 >= len(list1):
         yield list1
@@ -21,8 +24,12 @@ def permutations(n):
     amt = 1
     for i in range(n):
         amt *= (i+1)
-    print(amt)
-    for p in permute(list1):
-        print(list_to_string(p))
+    with open("solution", 'a') as f:
+        f.write(str(amt)+"\n")
+        for p in permute(list1):
+            f.write(list_to_string(p)+"\n")
 
-permutations(7)
+reader = Reader()
+with open("solution", 'w'):
+    pass
+permutations(int(reader.read("perm","rosalind_perm")))

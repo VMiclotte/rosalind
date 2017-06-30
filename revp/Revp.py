@@ -8,7 +8,10 @@ def reverse_palindrome(s,start,length):
     for i in range(len(my_string)):
         if complements[str(my_string[i])] != reverse[i]:
             return
-    print(str(start+1) + ' ' + str(length))
+    with open("solution", 'w'):
+        pass
+    with open("solution", "a") as f:
+        f.write(str(start+1) + ' ' + str(length) + "\n")
 
 
 
