@@ -8,7 +8,7 @@ class Reader:
         __location__ = os.path.realpath(
             os.path.join(os.getcwd(), os.path.dirname(os.path.dirname(__file__)), package, filename))
         with open(__location__) as f:
-            read_data = f.read()
+            read_data = f.read().replace('\n','')
             return read_data
 
     def read_dna(self, package, filename):
