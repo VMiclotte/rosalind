@@ -28,5 +28,5 @@ class Reader:
         dna_list = []
         for s in list_data:
             if s: #only adds non-empty strings
-                dna_list.append(Dna(s[13:], s[:13])) #first 12characters are Rosalind_WXYZ
+                dna_list.append(Dna(s[13:], s[:13])) #first 13characters are Rosalind_WXYZ
         return dna_list
